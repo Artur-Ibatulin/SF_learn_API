@@ -1,26 +1,9 @@
-# SF_learn_API
+# «Проектный практикум»
 
-Приложения, которое определяет тональность текста.
-Необходимый перечень библиотек представлен в файле requirements.txt 
+В рамках дисциплины «Проектный практикум» решена задача машинного обучения, направленную на автоматизацию бизнес-процессов. Модель предсказывает общую продолжительность поездки на такси в Нью-Йорке.
 
-```python
-from fastapi import FastAPI
-from transformers import pipeline
+# Решение задачи
+1. Решение задачи на Google Colab
+https://colab.research.google.com/drive/1wrG60V3RZ9hGyBqIijV-FRk2lsqSAgzt#scrollTo=42l5TKVtXKaY
 
-app = FastAPI()
-classifier = pipeline("sentiment-analysis")
-
-@app.get("/")
-def root():
-    return {"message": "Hello World"}
-
-@app.get("/predict/")
-def predict():
-    return classifier("I like machine learning engineering!")
-```
-
-## Запуск (Linux)
-```python
-    uvicorn main:app
-```
-
+2. Исходный код в блокноте формате ipynb представлен в файловом разделе
